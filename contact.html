@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Restaurant Pots&Pints Contact Information">
+    <meta name="keywords" content="contact information Pots&Pints, Pots&Pints business contact, Pots&Pints email contact,Pots&Pints phone contact, contact details of Pots&Pints restaurant, restaurant open hours, find Pots&Pints, Pots&Pints address, Pots&Pints location, Pots&Pints inquiries">
+    <meta name="author" content="Pots&Pints Restaurant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <title>Contact Form</title>
+</head>
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container position-relative">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-container">
+          <img src="img/logo_p&p.png" alt="Pots & Pints Logo" class="logo">
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="food.html">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="drinks.html">Drinks</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservations.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Customized Carousel - added -->
+    <div id="homepageCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/pots&pints.jpg" class="d-block w-100 carousel-image" alt="Pots & Pints Restaurant">
+          <div class="carousel-caption d-md-block">
+            <h2>Contact Us</h2>
+            <p>Your Opinion Matters</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/stew.jpg" class="d-block w-100 carousel-image" alt="Irish Stew">
+          <div class="carousel-caption d-md-block">
+            <h2>Contact Us</h2>
+            <p>We truely appriciate your support and value your opinion</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pints_and_people.jpg" class="d-block w-100 carousel-image" alt="Pots & Pints People">
+          <div class="carousel-caption d-md-block">
+            <h2>Contact Us</h2>
+            <p>We look forward to serving you again soon</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon custom-nav" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon custom-nav" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+      <!--contact form section-->
+    <div class="container py-4">
+        <div class="row d-flex justify-content-center align-items-start">
+          <!--contact details-->
+          <div class="col-lg-6 mb-4">
+            <h2>Contact Pots & Pints</h2>
+            <hr>
+            <p> For any queries or feedback, please do not hasitate to contact us. We are happy to help you and provide excellent service.</p> 
+            <p>Thank you for palcing your trust in us!</p>
+            <p><a href="mailto:contactus@pots&pints.ie">Email: contactus@pots&pints.ie</a></p>
+            <p><a href="tel:+353888888888">Phone: +353 (88) 888 8888</a></p>
+          </div>
+
+          <!--contact form-->
+          <div class="col-lg-6">
+            <h2>Your Opinion Matters</h2>
+            <hr>
+            <form id="myForm" onsubmit="return myFunction()" class="flex-column">
+              <input type="text" name="name" placeholder="Name" class="contactDetails mb-3" id="name" required>
+              <input type="text" name="email" placeholder="Email" class="contactDetails mb-3" id="email" required>
+              <input type="text" name="phone" placeholder="Phone Number" class="contactDetails mb-3" id="phone" required>
+              <input type="text" name="subject" placeholder="Subject" class="contactDetails mb-3" id="subject" required>
+              <textarea type="text" name="message" placeholder="Your Message" class="contactDetails" rows="10" id="message" required></textarea>
+              <button type="submit" class="btn btn-primary custom-btn-text-color btnPosition align-self-center"> Submit </button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Opening Hours section: image with columns inside for the opening hours-->
+    <section class="image-section position-relative">
+      <!--background image-->
+        <img src="img/pots&pints.jpg" alt="background Image of the restaurant" class="img-fluid w-100"> 
+
+        <!--Adding overlay over the image-->
+        <div class="overlay"></div>
+
+        <!--Content wrapper for the Header, and the 3 columns-->
+        <div class="content-wrapper"> 
+          <div class="container text-center">
+            <!--first row for the header-->
+            <div class="row mb-5">
+              <div class="col-lg-12">
+                <h1 class="headerOH">Opening Hours</h1>
+              </div>
+            </div>
+         
+
+          <!--second row inside the container for the opening hours-->
+            <div class="row">
+              <div class="col-12 col-md-4 mb-3 mx-3">
+                <h2>Mon-Thurs</h2>
+                <h3>10.00am<h3>
+                <h3>10.00pm</h3>
+              </div>
+              <div class="col-12 col-md-4 mb-3 mx-3">
+                <h2>Fri-Sat</h2>
+                <h3>10.00am</h3>
+                <h3>01.00am</h3>
+              </div>
+              <div class="col-12 col-md-4 mb-3 mx-3">
+                <h2>Sunday</h2>
+                <h3>11.00am</h3>
+                <h3>10.00pm</h3>
+              </div>
+            </div>
+          </div>  <!--closing container-->
+        </div> <!--closing content-wrapper-->
+    </section>
+
+    <section>
+      <!--map-->
+      <div class="mt-5 text-center position-relative">
+          <iframe src="https://www.google.com/maps/embed" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <!--Adding overlay over the map-->
+          <div class="map-overlay"></div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer mt-auto">
+      <div class="container text-center py-3">
+        <p class="footer-text">&copy; 2024 Pots & Pints. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/contact.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
