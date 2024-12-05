@@ -1,0 +1,377 @@
+<!--Author: ailsapm December 2024 NCI-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--meta tag asking search engine crawlers to index and update daily as the menu specials are updated daily-->
+  <!--regular new content hopefully means better SEO rating-->
+  <meta name="REVISIT-AFTER" content="1 DAYS" />
+    <!--meta tag keywords for SEO-->
+  <meta name="keywords" content="menu, dining, fine dining, gastropub, farm-to-table, brunch, lunch, dinner,restaurants near me, food near me, places to eat near me, restaurants nearby">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/food.css">
+  <title>Food - Pots & Pints</title>
+  <!--adding favicon-->
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+<!--navbar-->
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container position-relative">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-container">
+          <img src="img/logo.png" alt="Pots & Pints Logo" class="logo">
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="food.html">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="drinks.html">Drinks</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservations.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <!-- Customized Carousel -->
+   <div id="homepageCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/steak.jpg" class="d-block w-100 carousel-image" alt="Steak">
+        <div class="carousel-caption d-md-block">
+          <h2>Only the freshest ingredients</h2>
+          <p>Slow-cooked with care for a memorable dining experience.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/dinner.jpg" class="d-block w-100 carousel-image" alt="Fine Dining">
+        <div class="carousel-caption d-md-block">
+          <h2>Farm-to-Table Dining</h2>
+          <p>Our ingredients are sourced locally from our farming neighbours and our own vegetable garden.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/salad.jpg" class="d-block w-100 carousel-image" alt="Citrus Beetroot Salad">
+        <div class="carousel-caption d-md-block">
+          <h2>Fine Dining without the fuss</h2>
+          <p>Vegetarian and vegan options available.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon custom-nav" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon custom-nav" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--Menu cards-->
+    <section class="container my-5">
+      <h1 id="top" class="text-center section-title">Our Menus</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card menu-card">
+            <img src="img/omelet.jpg" class="card-img-top" alt="Brunch Menu">
+            <div class="card-body">
+              <!--adding stretched link to make the whole card a link to the brunch id-->
+              <!--played around with the positioning of the stretched-link because I wanted the whole card to be the link -->
+              <!--If I'd put it after the text, Brunch Menu would have showed up as a link which looked ugly. I'm happy with this.-->
+              <h5 class="card-title"> <a href="#brunch" class="card-link stretched-link"></a>Brunch Menu</h5>
+              <p class="card-text">Served daily from 9am until noon.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card menu-card">
+            <img src="img/soup.jpg" class="card-img-top" alt="Butternut Squash Soup">
+            <div class="card-body">
+              <!--adding stretched link to make the whole card a link to the lunch id-->
+              <h5 class="card-title"> <a href="#lunch" class="card-link stretched-link"></a>
+                <!--Same as above, closing the a tag before the text so that it doesn't show as a link, and instead
+                the whole card becomes the link-->Lunch Menu</h5>
+              <p class="card-text">Noon until 4pm daily. Specials run until 3pm.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card menu-card">
+            <img src="img/pasta.jpg" class="card-img-top" alt="Mushroom Sage Fettucine">
+            <div class="card-body">
+              <!--adding stretched link to make the whole card a link to the dinner id-->
+              <h5 class="card-title"><a href="#dinner" class="card-link stretched-link"></a>Dinner Menu</h5>
+              <p class="card-text">Dinner service is from 6pm to 10pm daily. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+  	<div id="button">
+  		<!--Finding an excuse to use a JavaScript function, so this button alternately hides and reveals the div containing Specials Menu-->
+      <!--adding class=button to allow for styling in css, also on button at bottom of page-->
+  		<button class=button onclick="specialMenu()">Show/Hide Specials</button>
+	</div>
+    </section>
+  <section class="container my-5">
+     <!--creating div for hidden specials menu, giving it an ID for the js function to getElementbyID-->
+    <div id="specials">
+  <!--adding a hover colour change effect on the table rows, I love how the subtle grey looks against the main website background-->
+  <!--it also makes it easier to see which price is associated with which meal-->
+  <table class="table table-hover text-left">
+    <thead>
+        <tr>
+            <th><h1>Daily Specials</h1></th>
+            <th></th>
+            <th class="text-right">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><h4>Soup of the Day<br></h4><h5><i>Cream of Parsnip Soup with a hint of Nutmeg, served with Sourdough Bread</i></h5></td>
+            <td><i></i></td>
+            <td class='text-right'><b>&nbsp;€4.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Salad of the Day<br></h4><h5><i>Rocket and Watercress with Gorgonzola, pecans and Blueberries, served with Sourdough Bread</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€12.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Lunch Special<br></h4><h5><i>Tuna Melt on Rye with a side of French Fries</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€9.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Dinner Special<br></h4><h5><i>Roast Chicken with Potato Gratin and a Medley of Vegetables</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€12.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Dessert of the Day<br></h4><h5><i>Gooseberry and Rhubarb Crumble with Vanilla Custard</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€5.00</b></td>
+        </tr>
+    </tbody>
+</table>
+  </div>
+  </section>
+  <section class="container my-5">
+  <!--creating table to hold Brunch Menu-->
+  <!--adding a hover colour change effect-->
+  <table class="table table-hover text-left">
+    <thead>
+        <tr>
+            <th><h1 id="brunch">Brunch Menu</h1></th>
+            <th></th>
+            <th class="text-right">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><h4>French Toast<br></h4><h5><i>Served with streaky Bacon & Maple Syrup OR Poached Pears, Cream & toasted Pine Nuts</i></h5></td>
+            <td><i></i></td>
+            <td class='text-right'><b>&nbsp;€11.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Smoky Eggs<br></h4><h5><i>Smoky bacon, Fried Organic Eggs, Wilted Spinach on Sourdough Toast</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€12.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Traditional Breakfast<br></h4><h5><i>Two Eggs, Bacon or Sausage, Mushrooms, Fried Tomatoes, Sourdough Toast, Boxty</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€14.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Breakfast Burrito<br></h4><h5><i>Chorizo, Eggs, Fresh Cotija Cheese, Peppers, Shallots, Chipotle Potatoes</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€10.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Crab Benedict<br></h4><h5><i>Two Crab Cakes on English Muffins, Poached Eggs, Hollandaise, Served with Hash Browns</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€16.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Baked Eggs<br></h4><h5><i>Shaved Brussels Sprouts, Smoky Bacon, Gran Padano Cream Sauce, Herby Bread Crumb Coating</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€14.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Quiche<br></h4><h5><i>Yellow Courgette, Cavolo Nero Kale, Burrata Cheese, Sage, served with a Garden Salad</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€12.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Belgian Waffles<br></h4><h5><i>Served with Cinnamon Butter, Maple Syrup & Powdered Sugar</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€14.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Croque Madame<br></h4><h5><i>Parisian Ham & Comte Cheese with a Fried Egg</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€14.00</b></td>
+        </tr>
+        <tr>
+          <td><h4>Greek Scramble<br></h4><h5><i>Eggs, Shaved Yellow Courgette, Feta Cheese, Watercress, Garlic Sweet Potatoes, Sourdough Toast</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€15.00</b></td>
+        </tr>
+    </tbody>
+</table>
+<!--new table for the lunch menu and as before, the light grey colour on mouseover-->
+<table class="table table-hover text-left">
+  <thead>
+      <tr>
+          <th><h1 id="lunch">Lunch Menu</h1></th>
+          <th></th>
+          <th class="text-right">Price</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><h4>Duck & Sweet Potato Cakes<br></h4><h5><i>Two gererously-sized Duck & Sweet Potato Cakes in a Sweet Cherry & Soya Glaze with Mango Sala</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€16.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Saffron Gerbil<br></h4><h5><i>Saffron Marinated Cornfed Gerbil, Spiced Bulgar Wheat, Pomegranate Syrup </i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€18.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Grilled Sea Trout<br></h4><h5><i>Freshly caught Seatrout served with Green Papaya Salsa and Lemon Couscous</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€17.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Deep-fried Chipmunk<br></h4><h5><i>Fresh daily, served with Orange & Watercress Salad, Purple Potato, Tomato & Lime Dressing</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€24.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Tomato Bruschetta<br></h4><h5><i>Roast Piccolo Tomatoes, Torn Basil Leaves, Feta Cheese and Sicilian Olive Oil</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€9.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Veggie Wrap<br></h4><h5><i>Homemade Minted Hummus, Charred Red Peppers, Wilted Spinach, Roasted Cashews and Blackberries</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€10.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Classic BLT<br></h4><h5><i>Italian Dry Cure Bacon, Beefsteak Tomato, Mixed Leaves and Dijon Mayo</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€11.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Smoked Salmon Bagel<br></h4><h5><i>Hot Smoked Salmon, Fennel Cream Cheese, Pickled Onion and Capers on an Everything Bagel</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€12.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Feta Salad<br></h4><h5><i>Feta Cheese with Pear Tomatoes, Olives and Cucumber, Mixed Leaves with Nettle and Almond Pesto</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€11.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Baked Potato<br></h4><h5><i>Topped with Honey Roast Ham, Scallions and Red Leicester Cheese, served with Garden Salad and Coleslaw</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€10.00</b></td>
+      </tr>
+  </tbody>
+</table>
+<!--dinner menu table, same mouseover as above-->
+<table class="table table-hover text-left">
+  <thead>
+      <tr>
+          <th><h1 id="dinner">Dinner Menu</h1></th>
+          <th></th>
+          <th class="text-right">Price</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><h4>Roast Lamb<br></h4><h5><i>Roast Leg of Spring Lamb served with Elderflower and Herb Stuffing, Roast Yams, Gravy and Mint Jelly</i></h5></td>
+          <td><i></i></td>
+          <td class='text-right'><b>&nbsp;€28.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Seafood Medley Pie<br></h4><h5><i>Chunky seafood Pie topped with Cheddar Mash, served with Buttered Asparagus</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€22.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Wild Mushroom Risotto<br></h4><h5><i>Chanterelle, Lion's Mane and Shitake mushrooms, with Pecorino cheese and Coriander</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€24.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Braised Rabbit in Port Wine<br></h4><h5><i>Served with Paprikash Sauce, Homemade Noodles and Sauteed Greens</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€29.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Chickpea & Sweet Potato Curry<br></h4><h5><i>Served with Yellow Courgette, Basmati Rice, Poppadums & Raita</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€22.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Orzo Puttanesca<br></h4><h5><i>with Winter Greens, Pickled Parrot and Parmesan Shavings</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€24.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Beef Striploin Roast<br></h4><h5><i>with Yorkshire Pudding, Roasted Potatoes, Parsnip Puree & Confit Shallots,
+          Beef Gravy & Horseradish</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€32.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Grilled Half Lobster<br></h4><h5><i>Drizzled in Beer Butter and served with Garden Salad and Fries</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€35.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Beer Battered Hamster<br></h4><h5><i>A Traditional Favourite, served with Fries, Mushy Peas and Tartar Sauce</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€26.00</b></td>
+      </tr>
+      <tr>
+        <td><h4>Flame Grilled Venison<br></h4><h5><i>Served with Beetroot, Celeriac and Blackberry Salad, Green Peppercorn Sauce and Soda Bread</i></h5></td>
+        <td><i></i></td>
+        <td class='text-right'><b>&nbsp;€32.00</b></td>
+      </tr>
+  </tbody>
+</table>
+  </section>
+  <section class="container my-5">
+  	<div id="backtotop">
+  		<!--allow user to go straight back to the top of the page without scrolling-->
+  		<button class="button"> <a href="#top" style="text-decoration:none"><font color="white">Back to top</font></a></button>
+	</div>
+    </section>
+ <!--footer goes here-->
+  <footer class="footer mt-auto">
+    <div class="container text-center py-3">
+      <p class="footer-text">&copy; 2024 Pots & Pints. All rights reserved.</p>
+    </div>
+  </footer>
+  <!--my js-->
+  <script src="js/food.js"></script>
+  <!--Bootstrap js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

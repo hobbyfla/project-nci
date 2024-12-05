@@ -1,0 +1,198 @@
+/*Author ailsapm NCI 2024*/
+/* General Theme Colors */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff5e1;
+  color: #333333;
+}
+
+/* Add Margin for Page Content */
+.page-content { 
+  margin-top: 200px; /* Ensures content starts below the logo */
+}
+
+/* Navbar Styling */
+.navbar {
+  background: #fff5e1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  position: relative;
+  z-index: 10;
+}
+/* Add hover styling - colour and size changes */
+nav a:hover {
+  color: var(whitesmoke);
+  font-size: 18px;
+  background-color: #FF7F50;
+}
+
+/* Logo Container Styling */
+.logo-container {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: #fff5e1; /* Matches background theme */
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -30px; /* Slight overlap with carousel */
+  overflow: hidden;
+}
+
+/* Logo Styling */
+.logo {
+  width: 80%; /* Adjust to fit nicely inside the circle */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Carousel Styling */
+.carousel-image {
+  height: 400px;
+  object-fit: cover;
+}
+.carousel-caption {
+  background: rgba(255, 203, 164, 0.7);
+  border-radius: 10px;
+  padding: 1rem;
+  color: rgb(75, 66, 62);
+}
+.carousel-caption h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+/* Link Styling */
+/* unvisited link */
+a:link {
+  color: purple;
+}
+
+/* mouse hovering over link */
+a:hover {
+  color: white;
+  font-size: 18px;
+  background-color: #FF7F50;
+}
+
+
+/*styling the mailto link*/
+a[href^="mailto:"]
+{ 
+  font-family: sans-serif;
+  color: purple;	
+}
+
+a[href^="mailto:"]:hover {
+  color: white;
+  font-size: 18px;
+  background-color: #FF7F50;
+}
+
+/*positioning the button to call ageVerify function and link to drinks page*/
+#button{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/*centering the button in the div*/
+#verifyage{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*styling the button*/
+button {
+  background-color: #FF7F50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  }
+/*styling the button on mouseover*/
+  .button:hover {
+    background-color: rgb(226, 70, 9);
+    color: white;
+    box-shadow: rgba(32, 31, 31, 0.35) 0px 7px 10px;
+}
+
+
+/* Card Styling */
+.menu-card {
+  background: #ffffff;
+  border: 2px solid #c6c090;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.menu-card:hover {
+  transform: scale(1.05);
+  background-color: #FF7F50;
+}
+.menu-card img {
+  border-bottom: 2px solid #c6c090;
+  border-radius: 8px 8px 0 0;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #433a2c; /* Dark brown color */
+  color: #fff5e1; /* Light beige to contrast */
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer-text {
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer a {
+  color: #c6c090; /* Matches card border for consistency */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff5e1; /* Lighter hover effect */
+}
+
+/* Push Footer to Bottom */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto; /* Ensures footer stays at the bottom */
+} 
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .logo-container {
+      width: 90px;
+      height: 90px;
+      top: -50px; /* Almost completely removing overlap as it was hiding my dropdown navbar on smaller screens  */
+  }
+
+  .logo {
+      width: 60%; /* Substantially smaller logo to keep dropdown navbar visible on smaller screen */
+  }
+}
