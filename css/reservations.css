@@ -1,0 +1,169 @@
+/* Table Reservation Styling */
+.table-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container.wide {
+  width: 150px;
+}
+
+.table {
+  width: 60px;
+  height: 60px;
+  background-color: #c6c090;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff5e1;
+  cursor: pointer;
+}
+
+.table.wide {
+  width: 100px;
+}
+
+.chair {
+  position: absolute;
+  background-color: #433a2c;
+  border-radius: 15%;
+}
+
+.chair.top {
+  width: 20px;
+  height: 10px;
+  top: -3px;
+}
+
+.chair.bottom {
+  width: 20px;
+  height: 10px;
+  bottom: 15px;
+}
+
+.chair.left {
+  width: 10px;
+  height: 20px;
+  left: 7px;
+  top: 30px;
+}
+
+.chair.right {
+  width: 10px;
+  height: 20px;
+  right: 5px;
+  top: 30px;
+}
+
+.double-chair-container {
+  position: absolute;
+  width: 70px;
+  height: 10px;
+}
+
+.double-chair-container.bottom {
+  bottom: 15px;
+}
+
+.double-chair-container.top {
+  top: -3px;
+}
+
+.double-chair {
+  background-color: #433a2c;
+  border-radius: 15%;
+  width: 20px;
+  height: 100%;
+}
+
+.table-container.selected .table {
+  background-color: #433a2c;
+  color: #fff;
+}
+
+.table-container.selected .chair {
+  background-color: #c6c090;
+}
+
+.table-container.selected .double-chair {
+  background-color: #c6c090;
+}
+
+/* Reservation Form Styles */
+
+.reservation-form-container {
+  background: linear-gradient(135deg, #fff5e1, #f4e3c3);
+  border: 1px solid #c6c090;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-form-container h3.form-title {
+  font-size: 1.8rem;
+  color: #433a2c;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.reservation-form-container {
+  max-width: 70%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffffff, #f9f4e8);
+  border: 1px solid #c6c090;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-form-container h3.form-title {
+  font-size: 1.8rem;
+  color: #433a2c;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.reservation-form-container .btn {
+  background-color: #433a2c;
+  color: #fff5e1;
+  font-weight: bold;
+  border: 1px solid #c6c090;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reservation-form-container .btn:hover {
+  background-color: #c6c090;
+  color: #433a2c;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 1200px) {
+  .reservation-form-container {
+    max-width: 90%;
+  }
+}

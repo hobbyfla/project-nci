@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Start - SEO Optimisation -->
+  <meta name="description"
+    content="Pots & Pints - Traditional Irish cuisine and craft brews. Discover hearty meals, live entertainment, and a cozy atmosphere.">
+  <meta name="keywords"
+    content="Irish cuisine, craft brews, Pots & Pints, traditional food, Irish pub, live music, seafood chowder, Irish stew">
+  <meta name="author" content="Pots & Pints">
+  <!-- Finish - SEO Optimisation  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/reservations.css">
+  <title>Pots & Pints - Reservations</title>
+  <!--adding favicon-->
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+
+<body>
+  <!-- Start - Menu / Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container position-relative">
+      <a class="navbar-brand" href="index.html" aria-label="Pots & Pints Homepage">
+        <div class="logo-container" id="logoContainer">
+          <img src="img/logo.png" alt="Pots & Pints Logo" class="logo" id="logoImage">
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" aria-label="About Us">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="food.html" aria-label="Food Menu">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="drinks.html" aria-label="Drinks Menu">Drinks</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reservations.html"
+              aria-label="Make Reservations">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" aria-label="Contact Us">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Finish - Menu / Nav Bar -->
+
+  <!-- Start - Page Main Content -->
+
+  <section class="container my-5">
+    <h2 class="text-center section-title">Reserve Your Table</h2>
+    <p class="text-center mb-4">Select a table from the layout below and fill out the form to confirm your
+      reservation.</p>
+
+    <div id="tableLayout" class="d-flex justify-content-center flex-wrap">
+      <div class="table-container" data-table="1">
+        <div class="chair top"></div>
+        <div class="chair left"></div>
+        <div class="table">1</div>
+        <div class="chair right"></div>
+        <div class="chair bottom"></div>
+      </div>
+      <div class="table-container wide" data-table="2">
+        <div class="double-chair-container top d-flex justify-content-between">
+          <div class="double-chair"></div>
+          <div class="double-chair"></div>
+        </div>
+        <div class="chair left"></div>
+        <div class="table wide">2</div>
+        <div class="chair right"></div>
+        <div class="double-chair-container bottom d-flex justify-content-between">
+          <div class="double-chair"></div>
+          <div class="double-chair"></div>
+        </div>
+      </div>
+      <div class="table-container wide" data-table="3">
+        <div class="double-chair-container top d-flex justify-content-between">
+          <div class="double-chair"></div>
+          <div class="double-chair"></div>
+        </div>
+        <div class="chair left"></div>
+        <div class="table wide">3</div>
+        <div class="chair right"></div>
+        <div class="double-chair-container bottom d-flex justify-content-between">
+          <div class="double-chair"></div>
+          <div class="double-chair"></div>
+        </div>
+      </div>
+      <div class="table-container" data-table="4">
+        <div class="chair top"></div>
+        <div class="chair left"></div>
+        <div class="table">4</div>
+        <div class="chair right"></div>
+        <div class="chair bottom"></div>
+      </div>
+    </div>
+    <div class="reservation-form-container shadow p-4 rounded">
+      <form id="reservationForm">
+        <div class="mb-4 text-center">
+          <h3 class="form-title">Reservation Form</h3>
+        </div>
+        <div class="mb-3">
+          <label for="selectedTable" class="form-label">Selected Table</label>
+          <input type="text" class="form-control" id="selectedTable" placeholder="Select a table from the layout"
+            readonly required>
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="date" class="form-label">Reservation Date</label>
+            <input type="date" class="form-control" id="date" required>
+          </div>
+          <div class="col-md-6">
+            <label for="time" class="form-label">Reservation Time</label>
+            <input type="time" class="form-control" id="time" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="guests" class="form-label">Number of Guests</label>
+          <input type="number" class="form-control" id="guests" placeholder="Enter number of guests" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 py-2">Submit Reservation</button>
+      </form>
+      <div id="successMessage" class="alert alert-success mt-4 d-none text-center" role="alert">
+        Your reservation has been successfully submitted!
+      </div>
+    </div>
+  </section>
+  <!-- Finish - Page Main Content -->
+
+  <footer class="footer mt-auto">
+    <div class="container text-center py-3">
+      <p>&copy; 2024 Pots & Pints. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Javascript Files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/reservations.js"></script>
+</body>
+
+</html>
